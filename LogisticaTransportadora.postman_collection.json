@@ -1,0 +1,172 @@
+{
+	"info": {
+		"_postman_id": "a72fa9df-edc8-4c04-a0da-48270c2ee36f",
+		"name": "LogisticaTransportadora",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "4962354"
+	},
+	"item": [
+		{
+			"name": "CrearCliente",
+			"request": {
+				"auth": {
+					"type": "bearer"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"NombreCliente\":\"Josue Fernandez Berdugo\",\r\n  \"IdTipoDoc\":1,\r\n  \"Telefono\":123412,\r\n  \"Celular\":23134123,\r\n  \"Email\":\"jferber18@gmail.com\",\r\n  \"Direccion\":\"Carrera 88a #34b - 08\",\r\n  \"Productos\":[\r\n      {\r\n          \"NombreProducto\":\"Zapatos de charol\",\r\n          \"TipoLogistica\":1,\r\n          \"Activo\":1\r\n      },\r\n      {\r\n          \"NombreProducto\":\"Correas de cuero\",\r\n          \"TipoLogistica\":1,\r\n          \"Activo\":1\r\n      }\r\n  ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:49347/api/Clientes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "49347",
+					"path": [
+						"api",
+						"Clientes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ListarCliente",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:49347/api/Clientes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "49347",
+					"path": [
+						"api",
+						"Clientes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CrearBodegaPuertos",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    {\r\n        \"IdCliente\": 2,\r\n        \"IdTipoLogistica\":1,\r\n        \"Nombre\": \"Pivijai\",\r\n        \"Direccion\":\"Carrera 88a #34b-08\",\r\n        \"Activo\":1\r\n    },\r\n    {\r\n        \"IdCliente\": 2,\r\n        \"IdTipoLogistica\":2,\r\n        \"Nombre\": \"Puerto valdivia\",\r\n        \"Direccion\":\"Carrera 88a #34b-08\",\r\n        \"Activo\":1\r\n    }\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:49347/api/BodegasPuertos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "49347",
+					"path": [
+						"api",
+						"BodegasPuertos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CrearPlanEntrega",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"IdProducto\":1,\r\n    \"IdTipoLogistica\":1,\r\n    \"CantidadProducto\":11,\r\n    \"FechaRegistro\":\"24/08/2023\",\r\n    \"FechaEntrega\":\"29/05/2023\",\r\n    \"IdBodega\":2,\r\n    \"PlacaVehiculo\":\"ABC455\",\r\n    \"NumeroFlota\":\"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:49347/api/PlanEntrega",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "49347",
+					"path": [
+						"api",
+						"PlanEntrega"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ListarBodegasPuertos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:49347/api/BodegasPuertos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "49347",
+					"path": [
+						"api",
+						"BodegasPuertos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ListarPlanesEntrega",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:49347/api/PlanEntrega",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "49347",
+					"path": [
+						"api",
+						"PlanEntrega"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
