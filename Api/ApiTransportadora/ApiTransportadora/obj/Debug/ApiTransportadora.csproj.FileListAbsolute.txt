@@ -198,3 +198,15 @@ C:\Users\JOSUE\Desktop\GitHub\LogisticaTransporte\Api\ApiTransportadora\ApiTrans
 C:\Users\JOSUE\Desktop\GitHub\LogisticaTransporte\Api\ApiTransportadora\ApiTransportadora\obj\Debug\ApiTransportadora.csproj.CopyComplete
 C:\Users\JOSUE\Desktop\GitHub\LogisticaTransporte\Api\ApiTransportadora\ApiTransportadora\obj\Debug\ApiTransportadora.dll
 C:\Users\JOSUE\Desktop\GitHub\LogisticaTransporte\Api\ApiTransportadora\ApiTransportadora\obj\Debug\ApiTransportadora.pdb
+C:\Users\JOSUE\Desktop\GitHub\LogisticaTransporte\Api\ApiTransportadora\ApiTransportadora\bin\Microsoft.Owin.Cors.dll
+C:\Users\JOSUE\Desktop\GitHub\LogisticaTransporte\Api\ApiTransportadora\ApiTransportadora\bin\Microsoft.Owin.dll
+C:\Users\JOSUE\Desktop\GitHub\LogisticaTransporte\Api\ApiTransportadora\ApiTransportadora\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\JOSUE\Desktop\GitHub\LogisticaTransporte\Api\ApiTransportadora\ApiTransportadora\bin\Microsoft.Owin.Security.dll
+C:\Users\JOSUE\Desktop\GitHub\LogisticaTransporte\Api\ApiTransportadora\ApiTransportadora\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\JOSUE\Desktop\GitHub\LogisticaTransporte\Api\ApiTransportadora\ApiTransportadora\bin\Owin.dll
+C:\Users\JOSUE\Desktop\GitHub\LogisticaTransporte\Api\ApiTransportadora\ApiTransportadora\bin\System.Web.Cors.dll
+C:\Users\JOSUE\Desktop\GitHub\LogisticaTransporte\Api\ApiTransportadora\ApiTransportadora\bin\Microsoft.Owin.xml
+C:\Users\JOSUE\Desktop\GitHub\LogisticaTransporte\Api\ApiTransportadora\ApiTransportadora\bin\Microsoft.Owin.Cors.xml
+C:\Users\JOSUE\Desktop\GitHub\LogisticaTransporte\Api\ApiTransportadora\ApiTransportadora\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\JOSUE\Desktop\GitHub\LogisticaTransporte\Api\ApiTransportadora\ApiTransportadora\bin\Microsoft.Owin.Security.xml
+C:\Users\JOSUE\Desktop\GitHub\LogisticaTransporte\Api\ApiTransportadora\ApiTransportadora\bin\Microsoft.Owin.Security.OAuth.xml

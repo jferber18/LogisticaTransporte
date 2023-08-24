@@ -92,6 +92,7 @@ namespace Service.Clases
                     Parametros.Add(new SqlParameter("@IdCliente", cliente.IdCliente));
                     Parametros.Add(new SqlParameter("@IdTipoLogistica", 0));
                     DataTable Tbl2 = Co.EjecutarProcedimientoAlmacenado(SP, Parametros, Conexion);
+                    List<Producto> ListarProd = new List<Producto>();
                     foreach (DataRow item2 in Tbl2.Rows)
                     {
                         Producto producto = new Producto();
@@ -100,14 +101,16 @@ namespace Service.Clases
                         producto.TipoLogistica = int.Parse(item2["IdTipoLogistica"].ToString());
                         producto.Activo = item2["Activo"].ToString() == "True" ? 1 : 0;
 
-                        cliente.Productos.Add(producto);
+                        ListarProd.Add(producto);
                     }
+
+                    cliente.Productos = ListarProd;
                     modelCliente.Add(cliente);
                 }
 
                 response.mensaje = "Consulta ejecutada correctamente";
                 response.response = modelCliente;
-                response.Estado = false;
+                response.Estado = true;
             }
             catch (Exception ex)
             {

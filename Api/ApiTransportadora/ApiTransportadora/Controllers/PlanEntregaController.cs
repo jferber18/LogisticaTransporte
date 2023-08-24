@@ -14,8 +14,6 @@ namespace ApiTransportadora.Controllers
     [RoutePrefix("api/PlanEntrega")]
     public class PlanEntregaController : ApiController
     {
-
-
         private IServicePlanEntrega servicePlanEntrega = new ServicePlanEntrega();
         private string Conexion = "DB_Connection";
         ModelResponse response;
@@ -43,28 +41,6 @@ namespace ApiTransportadora.Controllers
                 response.Estado = false;
                 return Request.CreateResponse(HttpStatusCode.BadRequest, response);
             }
-        }
-
-        // GET: api/PlanEntrega
-        public IEnumerable<string> Get()
-        {
-            return new string[] { "value1", "value2" };
-        }
-
-        // GET: api/PlanEntrega/5
-        public string Get(int id)
-        {
-            return "value";
-        }
-
-        // PUT: api/PlanEntrega/5
-        public void Put(int id, [FromBody]string value)
-        {
-        }
-
-        // DELETE: api/PlanEntrega/5
-        public void Delete(int id)
-        {
         }
     }
 }

@@ -42,27 +42,5 @@ namespace ApiTransportadora.Controllers
                 return Request.CreateResponse(HttpStatusCode.BadRequest, response);
             }
         }
-
-        // GET: api/BodegasPuertos
-        public IEnumerable<string> Get()
-        {
-            return new string[] { "value1", "value2" };
-        }
-
-        // GET: api/BodegasPuertos/5
-        public string Get(int id)
-        {
-            return "value";
-        }
-
-        // PUT: api/BodegasPuertos/5
-        public void Put(int id, [FromBody]string value)
-        {
-        }
-
-        // DELETE: api/BodegasPuertos/5
-        public void Delete(int id)
-        {
-        }
     }
 }

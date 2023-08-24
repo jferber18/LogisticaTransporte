@@ -19,13 +19,14 @@ namespace ApiTransportadora.Controllers
         private string Conexion = "DB_Connection";
         ModelResponse response;
 
-        [HttpGet]
-        public HttpResponseMessage Get()
+        [AllowAnonymous]
+        //[Autorizar]
+        public HttpResponseMessage Get(int Id = 0)
         {
             try
             {
                 Conexion = ConfigurationManager.ConnectionStrings[Conexion].ToString();
-                response = this.serviceCliente.ListarClientes(Conexion);
+                response = this.serviceCliente.ListarClientes(Conexion, Id);
                 if (response.Estado)
                 {
                     return Request.CreateResponse(HttpStatusCode.OK, response);
@@ -44,34 +45,8 @@ namespace ApiTransportadora.Controllers
             }
         }
 
-
-        // GET api/Clientes/1
-        [HttpGet]
-        public HttpResponseMessage Get(int IdCliente)
-        {
-            try
-            {
-                Conexion = ConfigurationManager.ConnectionStrings[Conexion].ToString();
-                response = this.serviceCliente.ListarClientes(Conexion,IdCliente);
-                if (response.Estado)
-                {
-                    return Request.CreateResponse(HttpStatusCode.OK, response);
-                }
-                else
-                {
-                    return Request.CreateResponse(HttpStatusCode.BadRequest, response);
-                }
-            }
-            catch (Exception ex)
-            {
-                response.mensaje = "Error al listar los cliente";
-                response.excepcion = ex.Message;
-                response.Estado = false;
-                return Request.CreateResponse(HttpStatusCode.BadRequest, response);
-            }
-        }
-
-        [HttpPost]
+        [AllowAnonymous]
+        //[Autorizar]
         public HttpResponseMessage Post(ModelCliente Cliente)
         {
             try
@@ -96,14 +71,12 @@ namespace ApiTransportadora.Controllers
             }
         }
 
-        // PUT: api/Clientes/5
-        public void Put(int id, [FromBody] string value)
-        {
-        }
-
+        [AllowAnonymous]
+        //[Authorize(Roles = "admin")]
         // DELETE: api/Clientes/5
         public void Delete(int id)
         {
+
         }
     }
 }
