@@ -20,5 +20,10 @@ namespace ApiTransportadora.InyeccionD
         {
            return  this.serviceCliente.CrearCliente(cliente, Conexion);
         }
+
+        public ModelResponse ListarClientes(string Conexion,int IdCLiente =0)
+        {
+            return this.serviceCliente.ListarClientes(Conexion, IdCLiente);
+        }
     }
 }

@@ -10,5 +10,6 @@ namespace Service.Interfaces
     public interface IServicePlanEntrega
     {
         ModelResponse CrearPlanEntrega(ModelPlanEntrega cliente, string Conexion);
+        ModelResponse ValidarCamposPlanEntrega(ModelPlanEntrega planEntrega);
     }
 }

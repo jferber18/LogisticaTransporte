@@ -45,6 +45,7 @@
     <Compile Include="Clases\ModelBodegaPuerto.cs" />
     <Compile Include="Clases\ModelCliente.cs" />
     <Compile Include="Clases\ModelConexion.cs" />
+    <Compile Include="Clases\ModelFunciones.cs" />
     <Compile Include="Clases\ModelResponse.cs" />
     <Compile Include="Clases\ModelPlanEntrega.cs" />
     <Compile Include="Class1.cs" />

@@ -6,6 +6,7 @@ namespace Model.Clases
 {
     public class ModelCliente
     {
+        public int? IdCliente { get; set; }
         public string NombreCliente { get; set; }
         public int IdTipoDoc { get; set; }
         public int Telefono { get; set; }
@@ -17,6 +18,7 @@ namespace Model.Clases
 
     public class Producto
     {
+        public int? IdProducto { get; set; }
         public string NombreProducto { get; set; }
         public int TipoLogistica { get; set; }
         public int Activo { get; set; }

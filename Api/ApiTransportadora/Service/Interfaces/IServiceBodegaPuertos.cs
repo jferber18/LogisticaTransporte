@@ -10,5 +10,6 @@ namespace Service.Interfaces
     public interface IServiceBodegaPuertos
     {
         ModelResponse CrearBodegaPuerto(List<ModelBodegaPuerto> cliente, string Conexion);
+        ModelResponse ValidarCamposBodegasPuertos(List<ModelBodegaPuerto> bodegaPuertos);
     }
 }

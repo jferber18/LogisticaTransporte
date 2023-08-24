@@ -7,6 +7,8 @@ namespace Service.Interfaces
 {
     public interface IServiceCliente
     {
+        ModelResponse ListarClientes(string Conexion, int IdCliente = 0);
         ModelResponse CrearCliente(ModelCliente cliente, string Conexion);
+        ModelResponse ValidarCamposCliente(ModelCliente cliente);
     }
 }
