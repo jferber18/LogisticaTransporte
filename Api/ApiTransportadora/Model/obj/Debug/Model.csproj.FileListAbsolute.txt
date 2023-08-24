@@ -8,3 +8,4 @@ C:\Users\JOSUE\Desktop\GitHub\LogisticaTransporte\Api\ApiTransportadora\Model\bi
 C:\Users\JOSUE\Desktop\GitHub\LogisticaTransporte\Api\ApiTransportadora\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
 C:\Users\JOSUE\Desktop\GitHub\LogisticaTransporte\Api\ApiTransportadora\Model\obj\Debug\Model.dll
 C:\Users\JOSUE\Desktop\GitHub\LogisticaTransporte\Api\ApiTransportadora\Model\obj\Debug\Model.pdb
+C:\Users\JOSUE\Desktop\GitHub\LogisticaTransporte\Api\ApiTransportadora\Model\obj\Debug\Model.csproj.AssemblyReference.cache

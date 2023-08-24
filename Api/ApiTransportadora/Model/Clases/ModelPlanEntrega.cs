@@ -8,6 +8,7 @@ namespace Model.Clases
 {
     public class ModelPlanEntrega
     {
+        public int? IdEntrega { get; set; }
         public int IdProducto { get; set; }
         public int IdTipoLogistica { get; set; }
         public int CantidadProducto { get; set; }
@@ -17,5 +18,10 @@ namespace Model.Clases
         public string NumeroGuia { get; set; } = "";
         public string PlacaVehiculo { get; set; } = "";
         public string NumeroFlota { get; set; } = "";
+
+        public decimal? PrecioEnvioFijo { get; set; }
+        public decimal? PorcenDescuento { get; set; }
+        public decimal? PrecioEnvioReal { get; set; }
+
     }
 }

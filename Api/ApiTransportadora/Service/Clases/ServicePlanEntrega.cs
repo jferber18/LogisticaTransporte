@@ -62,6 +62,53 @@ namespace Service.Clases
             return response;
         }
 
+        public ModelResponse ListarPlanEntrega(string Conexion, int IdEntrega = 0, int IdProducto = 0, int IdTipoLogistica = 0, int IdBodega = 0, int IdCliente = 0)
+        {
+            ModelResponse response = new ModelResponse();
+            List<ModelPlanEntrega> modelPlanEntrega = new List<ModelPlanEntrega>();
+            string SP = "LISTAR_PlanesEntrega";
+            try
+            {
+                Parametros.Clear();
+                Parametros.Add(new SqlParameter("@IdEntrega", IdEntrega));
+                Parametros.Add(new SqlParameter("@IdProducto", IdProducto));
+                Parametros.Add(new SqlParameter("@IdTipoLogistica", IdTipoLogistica));
+                Parametros.Add(new SqlParameter("@IdBodega", IdBodega));
+                Parametros.Add(new SqlParameter("@IdCliente", IdCliente));
+                DataTable Tbl = Co.EjecutarProcedimientoAlmacenado(SP, Parametros, Conexion);
+
+                foreach (DataRow item in Tbl.Rows)
+                {
+                    ModelPlanEntrega PlanEntrega = new ModelPlanEntrega();
+
+                    PlanEntrega.IdEntrega = int.Parse(item["IdEntrega"].ToString());
+                    PlanEntrega.IdTipoLogistica = int.Parse(item["IdTipoLogistica"].ToString());
+                    PlanEntrega.CantidadProducto = int.Parse(item["CantidadProducto"].ToString());
+                    PlanEntrega.FechaRegistro = item["FechaRegistro"].ToString();
+                    PlanEntrega.FechaEntrega = item["FechaEntrega"].ToString();
+                    PlanEntrega.PrecioEnvioFijo = decimal.Parse(item["PrecioEnvioFijo"].ToString());
+                    PlanEntrega.PorcenDescuento = decimal.Parse(item["PorcenDescuento"].ToString());
+                    PlanEntrega.PrecioEnvioReal = decimal.Parse(item["PrecioEnvioReal"].ToString());
+                    PlanEntrega.NumeroGuia = item["NumeroGuia"].ToString();
+                    PlanEntrega.PlacaVehiculo = item["PlacaVehiculo"].ToString();
+                    PlanEntrega.NumeroFlota = item["IdBodega"].ToString();
+                    modelPlanEntrega.Add(PlanEntrega);
+                }
+
+                response.mensaje = "Consulta ejecutada correctamente";
+                response.response = modelPlanEntrega;
+                response.Estado = true;
+
+            }
+            catch (Exception ex)
+            {
+                response.mensaje = "Error al listar los planes de entrega";
+                response.excepcion = ex.Message;
+                response.Estado = false;
+            }
+            return response;
+        }
+
         public ModelResponse ValidarCamposPlanEntrega(ModelPlanEntrega planEntrega)
         {
             ModelResponse response = new ModelResponse();
@@ -174,7 +221,5 @@ namespace Service.Clases
                 return "0";
             }
         }
-
-
     }
 }
