@@ -1,0 +1,9 @@
+C:\Users\JOSUE\source\repos\ApiTransportadora\Service\bin\Debug\Service.dll
+C:\Users\JOSUE\source\repos\ApiTransportadora\Service\bin\Debug\Service.pdb
+C:\Users\JOSUE\source\repos\ApiTransportadora\Service\bin\Debug\Model.dll
+C:\Users\JOSUE\source\repos\ApiTransportadora\Service\bin\Debug\Model.pdb
+C:\Users\JOSUE\source\repos\ApiTransportadora\Service\obj\Debug\Service.csproj.AssemblyReference.cache
+C:\Users\JOSUE\source\repos\ApiTransportadora\Service\obj\Debug\Service.csproj.CoreCompileInputs.cache
+C:\Users\JOSUE\source\repos\ApiTransportadora\Service\obj\Debug\Service.csproj.CopyComplete
+C:\Users\JOSUE\source\repos\ApiTransportadora\Service\obj\Debug\Service.dll
+C:\Users\JOSUE\source\repos\ApiTransportadora\Service\obj\Debug\Service.pdb
