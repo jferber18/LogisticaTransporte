@@ -18,7 +18,34 @@ namespace ApiTransportadora.Controllers
         private string Conexion = "DB_Connection";
         ModelResponse response;
 
-        [HttpPost]
+
+        [AllowAnonymous]
+        public HttpResponseMessage Get(int IdBodegaPuerto = 0, int IdCliente = 0, int IdTipoLogistica = 0)
+        {
+            try
+            {
+                Conexion = ConfigurationManager.ConnectionStrings[Conexion].ToString();
+                response = this.serviceBodegaPuertos.ListarBodegaPuerto(Conexion, IdBodegaPuerto, IdCliente, IdTipoLogistica);
+                if (response.Estado)
+                {
+                    return Request.CreateResponse(HttpStatusCode.OK, response);
+                }
+                else
+                {
+                    return Request.CreateResponse(HttpStatusCode.BadRequest, response);
+                }
+            }
+            catch (Exception ex)
+            {
+                response.mensaje = "Error al crear la bodega o puerto";
+                response.excepcion = ex.Message;
+                response.Estado = false;
+                return Request.CreateResponse(HttpStatusCode.BadRequest, response);
+            }
+        }
+
+
+        [AllowAnonymous]
         public HttpResponseMessage Post(List<ModelBodegaPuerto> modelBodegaPuerto)
         {
             try

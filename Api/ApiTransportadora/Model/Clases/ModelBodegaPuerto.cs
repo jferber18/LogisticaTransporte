@@ -8,6 +8,7 @@ namespace Model.Clases
 {
     public class ModelBodegaPuerto
     {
+        public int? IdBodegaPuerto { get; set; }
         public int IdCliente { get; set; }
         public int IdTipoLogistica { get; set; }
         public string Nombre { get; set; }

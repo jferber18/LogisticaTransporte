@@ -60,6 +60,45 @@ namespace Service.Clases
             return response;
         }
 
+        public ModelResponse ListarBodegaPuerto(string Conexion, int IdBodegaPuerto = 0, int IdCliente = 0, int IdTipoLogistica = 0)
+        {
+            ModelResponse response = new ModelResponse();
+            List<ModelBodegaPuerto> modelBodegaPuertos = new List<ModelBodegaPuerto>();
+            string SP = "LISTAR_BodegasPuertos";
+            try
+            {
+                Parametros.Clear();
+                Parametros.Add(new SqlParameter("@IdBodegaPuerto", IdBodegaPuerto));
+                Parametros.Add(new SqlParameter("@IdCliente", IdCliente));
+                Parametros.Add(new SqlParameter("@IdTipoLogistica", IdTipoLogistica));
+                DataTable Tbl = Co.EjecutarProcedimientoAlmacenado(SP, Parametros, Conexion);
+
+                foreach (DataRow item in Tbl.Rows)
+                {
+                    ModelBodegaPuerto bodegaPuerto = new ModelBodegaPuerto();
+                    bodegaPuerto.IdBodegaPuerto = int.Parse(item["IdBodegaPuerto"].ToString());
+                    bodegaPuerto.IdCliente = int.Parse(item["IdCliente"].ToString());
+                    bodegaPuerto.IdTipoLogistica = int.Parse(item["IdTipoLogistica"].ToString());
+                    bodegaPuerto.Nombre = item["Nombre"].ToString();
+                    bodegaPuerto.Direccion = item["Direccion"].ToString();
+
+                    modelBodegaPuertos.Add(bodegaPuerto);
+                }
+
+                response.mensaje = "Consulta ejecutada correctamente";
+                response.response = modelBodegaPuertos;
+                response.Estado = true;
+
+            }
+            catch (Exception ex)
+            {
+                response.mensaje = "Error al listar las bodegas y puertos";
+                response.excepcion = ex.Message;
+                response.Estado = false;
+            }
+            return response;
+        }
+
         public ModelResponse ValidarCamposBodegasPuertos(List<ModelBodegaPuerto> bodegaPuertos)
         {
             ModelResponse response = new ModelResponse();

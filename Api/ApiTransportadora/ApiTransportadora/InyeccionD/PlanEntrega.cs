@@ -20,5 +20,10 @@ namespace ApiTransportadora.InyeccionD
         {
             return this.servicePlanEntrega.CrearPlanEntrega(cliente, Conexion);
         }
+
+        public ModelResponse ListarPlanEntrega(string Conexion, int IdEntrega = 0, int IdProducto = 0, int IdTipoLogistica = 0, int IdBodega = 0, int IdCliente = 0)
+        {
+            return this.servicePlanEntrega.ListarPlanEntrega(Conexion,IdEntrega,IdProducto,IdTipoLogistica,IdBodega,IdCliente);
+        }
     }
 }

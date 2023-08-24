@@ -18,7 +18,33 @@ namespace ApiTransportadora.Controllers
         private string Conexion = "DB_Connection";
         ModelResponse response;
 
-        [HttpPost]
+        [AllowAnonymous]
+        //[Authorize]
+        public HttpResponseMessage Get(int IdEntrega = 0, int IdProducto = 0, int IdTipoLogistica = 0, int IdBodega = 0, int IdCliente = 0)
+        {
+            try
+            {
+                Conexion = ConfigurationManager.ConnectionStrings[Conexion].ToString();
+                response = this.servicePlanEntrega.ListarPlanEntrega(Conexion,IdEntrega, IdProducto, IdTipoLogistica, IdBodega, IdCliente);
+                if (response.Estado)
+                {
+                    return Request.CreateResponse(HttpStatusCode.OK, response);
+                }
+                else
+                {
+                    return Request.CreateResponse(HttpStatusCode.BadRequest, response);
+                }
+            }
+            catch (Exception ex)
+            {
+                response.mensaje = "Error al crear el plan de entrega";
+                response.excepcion = ex.Message;
+                response.Estado = false;
+                return Request.CreateResponse(HttpStatusCode.BadRequest, response);
+            }
+        }
+
+
         public HttpResponseMessage Post(ModelPlanEntrega modelPlanEntrega )
         {
             try

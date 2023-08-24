@@ -19,7 +19,12 @@ namespace ApiTransportadora.InyeccionD
 
         public ModelResponse CrearBodegaPuerto(List<ModelBodegaPuerto> cliente, string Conexion)
         {
-           return this.CrearBodegaPuerto(cliente, Conexion);
+            return this.serviceBodegaPuertos.CrearBodegaPuerto(cliente, Conexion);
+        }
+
+        public ModelResponse ListarBodegaPuerto(string Conexion, int IdBodegaPuerto = 0, int IdCliente = 0, int IdTipoLogistica = 0)
+        {
+            return this.serviceBodegaPuertos.ListarBodegaPuerto(Conexion, IdBodegaPuerto, IdCliente, IdTipoLogistica);
         }
     }
 }

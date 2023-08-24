@@ -9,6 +9,7 @@ namespace Service.Interfaces
 {
     public interface IServiceBodegaPuertos
     {
+        ModelResponse ListarBodegaPuerto(string Conexion,int IdBodegaPuerto = 0,int IdCliente =0,int IdTipoLogistica = 0);
         ModelResponse CrearBodegaPuerto(List<ModelBodegaPuerto> cliente, string Conexion);
         ModelResponse ValidarCamposBodegasPuertos(List<ModelBodegaPuerto> bodegaPuertos);
     }
