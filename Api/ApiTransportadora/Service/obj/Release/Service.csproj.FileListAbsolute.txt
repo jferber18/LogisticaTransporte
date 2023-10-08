@@ -1,0 +1,9 @@
+C:\Users\JOSUE\Desktop\GitHub\LogisticaTransporte\Api\ApiTransportadora\Service\bin\Release\Service.dll
+C:\Users\JOSUE\Desktop\GitHub\LogisticaTransporte\Api\ApiTransportadora\Service\bin\Release\Service.pdb
+C:\Users\JOSUE\Desktop\GitHub\LogisticaTransporte\Api\ApiTransportadora\Service\bin\Release\Model.dll
+C:\Users\JOSUE\Desktop\GitHub\LogisticaTransporte\Api\ApiTransportadora\Service\bin\Release\Model.pdb
+C:\Users\JOSUE\Desktop\GitHub\LogisticaTransporte\Api\ApiTransportadora\Service\obj\Release\Service.csproj.AssemblyReference.cache
+C:\Users\JOSUE\Desktop\GitHub\LogisticaTransporte\Api\ApiTransportadora\Service\obj\Release\Service.csproj.CoreCompileInputs.cache
+C:\Users\JOSUE\Desktop\GitHub\LogisticaTransporte\Api\ApiTransportadora\Service\obj\Release\Service.csproj.CopyComplete
+C:\Users\JOSUE\Desktop\GitHub\LogisticaTransporte\Api\ApiTransportadora\Service\obj\Release\Service.dll
+C:\Users\JOSUE\Desktop\GitHub\LogisticaTransporte\Api\ApiTransportadora\Service\obj\Release\Service.pdb

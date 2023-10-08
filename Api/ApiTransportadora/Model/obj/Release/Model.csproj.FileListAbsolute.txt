@@ -1,0 +1,6 @@
+C:\Users\JOSUE\Desktop\GitHub\LogisticaTransporte\Api\ApiTransportadora\Model\bin\Release\Model.dll
+C:\Users\JOSUE\Desktop\GitHub\LogisticaTransporte\Api\ApiTransportadora\Model\bin\Release\Model.pdb
+C:\Users\JOSUE\Desktop\GitHub\LogisticaTransporte\Api\ApiTransportadora\Model\obj\Release\Model.csproj.AssemblyReference.cache
+C:\Users\JOSUE\Desktop\GitHub\LogisticaTransporte\Api\ApiTransportadora\Model\obj\Release\Model.csproj.CoreCompileInputs.cache
+C:\Users\JOSUE\Desktop\GitHub\LogisticaTransporte\Api\ApiTransportadora\Model\obj\Release\Model.dll
+C:\Users\JOSUE\Desktop\GitHub\LogisticaTransporte\Api\ApiTransportadora\Model\obj\Release\Model.pdb
